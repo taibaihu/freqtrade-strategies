@@ -1,0 +1,65 @@
+{
+    "max_open_trades": 1,
+    "stake_currency": "USDC",
+    "stake_amount": 100,
+    "tradable_balance_ratio": 0.99,
+    "dry_run": false,
+    "trading_mode": "futures",
+    "margin_mode": "cross",
+    "leverage": 1.0,
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 5
+    },
+    "exit_pricing": {
+        "price_side": "same",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "exchange": {
+        "name": "binance",
+        "key": "ckhPrKVd8Bg1imKxvqAiu1ba8Hi7QsLST5wVjGWRtGNyPRM59wuL55OyVcAImtTs",
+        "secret": "E0rNRJb5XECc0URvX3a17p5a5vT3ToXRf5LtISOm2Z7sNayw0itKjUZyMm3IhBK6",
+        "ccxt_config": {
+            "rateLimit": 200
+        },
+        "pair_whitelist": [
+            "BTC/USDC:USDC"
+        ],
+        "pair_blacklist": []
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "telegram": {
+        "enabled": false,
+        "token": "",
+        "chat_id": ""
+    },
+    "bot_name": "CombinedStrategy",
+    "initial_state": "running",
+    "force_entry_enable": true,
+    "unfilledtimeout": {
+        "entry": 10,
+        "exit": 10,
+        "exit_timeout_count": 0,
+        "unit": "minutes"
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "0.0.0.0",
+        "listen_port": 8080,
+        "verbosity": "error",
+        "enable_openapi": false,
+        "jwt_secret_key": "CombinedStrategyJWTSecretKey20260529Secure!",
+        "CORS_origins": [],
+        "username": "admin",
+        "password": "admin123"
+    },
+    "internals": {
+        "process_throttle_secs": 5
+    }
+}
